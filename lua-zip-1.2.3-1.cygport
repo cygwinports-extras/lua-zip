@@ -1,0 +1,25 @@
+inherit lua
+
+DESCRIPTION="Lua ZIP file library"
+HOMEPAGE="http://www.keplerproject.org/luazip/"
+SRC_URI="http://luaforge.net/frs/download.php/2493/${PN/-}-${PV}.tar.gz"
+SRC_DIR="${PN/-}-${PV}"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake LIBS=${LUA_LIBS} LUA_INC=${LUA_INCLUDEDIR} LUA_VERSION_NUM=${LUA_VERSION/./0}
+}
+
+src_test() {
+	cd ${B}/tests
+	cp -f ../src/zip.dll .
+	${LUA} test_zip.lua
+}
+
+src_install() {
+	cd ${B}
+	cyginstall LUA_LIBDIR=${D}${LUA_LIBDIR} LUA_VERSION_NUM=${LUA_VERSION/./0}
+}
+
+HTMLDOCS="doc/us/*"

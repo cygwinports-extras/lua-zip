@@ -1,0 +1,58 @@
+lua-zip
+------------------------------------------
+LuaZip is a lightweight Lua extension library used to read files stored 
+inside zip files. The API is very similar to the standard Lua I/O 
+library API.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  libzzip0_13-0.13.49-1
+  lua-5.1.3-1
+
+Build requirements:
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://www.keplerproject.org/luazip/
+
+Canonical download:
+  http://luaforge.net/projects/luazip/
+
+-------------------------------------------
+
+Build instructions:
+  unpack lua-zip-1.2.3-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./lua-zip-1.2.3-X.cygport all
+
+This will create:
+  /usr/src/lua-zip-1.2.3-X-src.tar.bz2
+  /usr/src/lua-zip-1.2.3-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/lua/5.1/zip.dll
+  /usr/share/doc/lua-zip-1.2.3/README
+  /usr/share/doc/lua-zip-1.2.3/html/examples.html
+  /usr/share/doc/lua-zip-1.2.3/html/index.html
+  /usr/share/doc/lua-zip-1.2.3/html/license.html
+  /usr/share/doc/lua-zip-1.2.3/html/luazip-128.png
+  /usr/share/doc/lua-zip-1.2.3/html/manual.html
+
+------------------
+
+Port Notes:
+
+----- version 1.2.3-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
