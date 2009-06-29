@@ -1,5 +1,5 @@
 category: Lua Archive
-requires: cygwin lua libzzip0_13
+requires: lua libzzip0_13
 sdesc: "Lua ZIP file library"
 ldesc: "LuaZip is a lightweight Lua extension library used to read files 
 stored inside zip files. The API is very similar to the standard Lua I/O 
